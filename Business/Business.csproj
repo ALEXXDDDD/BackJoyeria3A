@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoMapperUtility\AutoMapperUtility.csproj" />
+    <ProjectReference Include="..\CommonModel\CommonModel.csproj" />
+    <ProjectReference Include="..\ConstantUtility\ConstantUtility.csproj" />
+    <ProjectReference Include="..\DBZapateriaDLopezModel\DBZapateriaDLopezModel.csproj" />
+    <ProjectReference Include="..\ExcelUtility\ExcelUtility.csproj" />
+    <ProjectReference Include="..\IBusiness\IBusiness.csproj" />
+    <ProjectReference Include="..\IRepository\IRepository.csproj" />
+    <ProjectReference Include="..\IService\IService.csproj" />
+    <ProjectReference Include="..\PDFUtility\PDFUtility.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\RequestResponseModel\RequestResponseModel.csproj" />
+    <ProjectReference Include="..\SecurityUtility\SecurityUtility.csproj" />
+    <ProjectReference Include="..\Service\Service.csproj" />
+  </ItemGroup>
+
+</Project>
