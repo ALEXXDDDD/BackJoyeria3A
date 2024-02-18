@@ -99,6 +99,7 @@ namespace Business.Venta.Usuario1
               //CREACION DE LA PERSONA 
                 ResponseVWUsuario result = new ResponseVWUsuario();
 
+                ResponseUsuario resultUsuario = new ResponseUsuario();
 
                 RequestPersona requestPersona = _mapper.Map<RequestPersona>(entity);
                 ResponsePersona responsePersona = _bussniessPersona.Create(requestPersona);
@@ -121,19 +122,19 @@ namespace Business.Venta.Usuario1
                     RequestCliente requestCliente = _mapper.Map<RequestCliente>(entity);
                     requestCliente.IdPersona = requestPersona.IdPersona;
                     ResponseCliente responseCliente = _bussniessCliente.Create(requestUsuario);
-                    //entity.Password = _cripto.AES_encriptar(entity.Password);
-                    //entity.Password = requestUsuario.Password;
+                    entity.Password = _cripto.AES_encriptar(entity.Password);
+                    entity.Password = requestUsuario.Password;
                     ResponseListUsuario responseUsuario = _bussniessVUsuario.Create(requestUsuario);
 
+                    resultUsuario.mensajeUsuario = "Se creo el Usuario";
                     /**
                      * CREACUON EN LA TABLA DE CLUENTE
                      * 
                      * */
-                     
-                  
+
                     //ResponseVWUsuario data = _mapper.Map<ResponseVWUsuario>(entity);
                     //data.IdUsuario = responseUsuario.IdUsuario;
-                    result.mensajeUsuario = "Se registro el Usuario  Correctamente";
+
                     return result;
                  } else
                    if (responsePersona.TipoPersona == "Administrador")
@@ -152,7 +153,7 @@ namespace Business.Venta.Usuario1
                                 //data.IdUsuario = responseUsuario.IdUsuario;
 
                     
-                       result.mensajeUsuario = "Se registro el Usuario  Correctamente";
+                       
                        return result;
                    }
             return result;

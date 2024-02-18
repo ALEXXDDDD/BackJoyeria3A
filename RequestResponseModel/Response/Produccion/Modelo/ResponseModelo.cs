@@ -10,7 +10,7 @@ namespace RequestResponseModel.Response.Produccion.Modelo
 {
     public class ResponseModelo
     {
-        public string IdModelo { get; set; } = null!;
+        public string? IdModelo { get; set; } = null;
         public string? NombreModelo { get; set; }
         public string? CodigoModelo { get; set; }
         public string? Descripcion { get; set; }

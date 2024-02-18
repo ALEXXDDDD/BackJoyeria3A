@@ -12,8 +12,6 @@ namespace RequestResponseModel.Response.Sistema
         public int IdUsuario { get; set; }
 
 
-        public string mensajeUsuario { get; set; } = "No se pudo crear el Usuario ";
-
         public string NombrePersona { get; set; } = null!;
 
         public string NombreRol { get; set; } = null!;

@@ -10,8 +10,7 @@ namespace DBZapateriaDLopezModel;
 public partial class Modelo
 {
     [Key]
-    [StringLength(10)]
-    public string IdModelo { get; set; } = null!;
+    public string? IdModelo { get; set; } = null;
 
     [StringLength(30)]
     public string? NombreModelo { get; set; }

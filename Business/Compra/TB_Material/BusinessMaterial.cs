@@ -35,6 +35,7 @@ namespace Business.Compra.TB_Material
             return response;
         }
         public ResponseMaterial Create(RequestMaterial entity)
+        
         {
             ResponseMaterial response = new();
             response.Material = new List<ResponseVWMaterial>();

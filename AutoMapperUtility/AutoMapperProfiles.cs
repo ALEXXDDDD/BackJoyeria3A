@@ -6,6 +6,7 @@ using RequestResponseModel.Request.Compra.Material;
 using RequestResponseModel.Request.Compra.Materiald;
 using RequestResponseModel.Request.Produccion;
 using RequestResponseModel.Request.Produccion.Area;
+using RequestResponseModel.Request.Produccion.DetalleProduccion;
 using RequestResponseModel.Request.Produccion.Empleado;
 using RequestResponseModel.Request.Produccion.Modelo;
 using RequestResponseModel.Request.Producto;
@@ -16,6 +17,7 @@ using RequestResponseModel.Response.Compra.ComprobanteDetalle;
 using RequestResponseModel.Response.Compra.Material;
 using RequestResponseModel.Response.Produccion;
 using RequestResponseModel.Response.Produccion.Area;
+using RequestResponseModel.Response.Produccion.DetalleProduccion;
 using RequestResponseModel.Response.Produccion.Empleado;
 using RequestResponseModel.Response.Produccion.Modelo;
 using RequestResponseModel.Response.Produccion.Producto;
@@ -124,6 +126,8 @@ namespace AutoMapperUtility
             CreateMap<RequestVWCliente,ResponseListCliente>().ReverseMap();
 
             CreateMap<ResponseCliente, RequestUsuario>().ReverseMap();
+            CreateMap<RequestVWUsuario, RequestCliente>().ReverseMap();
+            
             #endregion Cliente
             #region Usuario
             CreateMap<Usuario, RequestVWUsuario>().ReverseMap();
@@ -152,6 +156,13 @@ namespace AutoMapperUtility
             #region Modelo
             CreateMap<Modelo, RequestModelo>().ReverseMap();
             CreateMap<Modelo, ResponseModelo>().ReverseMap();
+            #endregion Modelo
+            #region Modelo
+            CreateMap<VwDetalleProduccion, DetalleProduccion>().ReverseMap();
+            CreateMap<VwDetalleProduccion, ResponseVwDetalleProduccion>().ReverseMap();
+            CreateMap<VwDetalleProduccion, RequestVWDetalleProduccion>().ReverseMap();
+            CreateMap<VwDetalleProduccion, DetalleProduccion>().ReverseMap();
+
             #endregion Modelo
         }
     }
