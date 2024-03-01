@@ -17,7 +17,7 @@ namespace RequestResponseModel.Response.Sistema
         [StringLength(25)]
         public string NombreRol { get; set; } = null!;
 
-        public string? Desc { get; set; }
+        public string? Descripción { get; set; }
 
         //[InverseProperty("IrolNavigation")]
         //public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();

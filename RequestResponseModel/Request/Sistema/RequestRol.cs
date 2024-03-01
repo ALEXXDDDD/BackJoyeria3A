@@ -17,6 +17,6 @@ namespace RequestResponseModel.Request.Sistema
         [StringLength(25)]
         public string NombreRol { get; set; } = null!;
 
-        public string? Desc { get; set; }
+        public string? Descripción { get; set; }
     }
 }

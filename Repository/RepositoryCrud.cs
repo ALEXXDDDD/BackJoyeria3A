@@ -13,7 +13,7 @@ namespace Repository
     public class RepositoryCrud<TEntity> where TEntity: class
     {
         #region Inyeccion de dependencias
-        internal DBZapatertiaDLopezContext db;
+        internal _dbTramiteDocumentarioContext db;
         internal DbSet<TEntity> dbSet;
         public RepositoryCrud()
         {
