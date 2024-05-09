@@ -72,9 +72,6 @@ namespace Business.Produccion.DetalleProduccion
         {
             throw new NotImplementedException();
         }
-
-
-
         #endregion Fin de la Declaracion de Variables 
     }
 }
